@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helpdesk Ticket Submission</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        max-width: 400px;
+        margin: 20px auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Helpdesk Ticket Submission</h2>
+
+    <form id="ticketForm">
+      <label for="ticketNumber">Enter Ticket Number:</label>
+      <input type="text" id="ticketNumber" name="ticketNumber" required />
+
+      <button type="button" onclick="generateTicket()">Submit Ticket</button>
+    </form>
+
+    <script>
+      function generateTicket() {
+        // In a real-world scenario, you would send the ticket number to a server,
+        // generate a unique ticket ID, store it in a database, and provide feedback to the user.
+        // This example simply alerts the ticket number.
+
+        var ticketNumber = document.getElementById("ticketNumber").value;
+        alert("Ticket submitted! Ticket Number: " + ticketNumber);
+      }
+    </script>
+  </body>
+</html>
